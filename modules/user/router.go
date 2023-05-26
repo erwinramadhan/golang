@@ -6,6 +6,9 @@ type Router struct {
 	rq RequestHandlerInterface
 }
 
+func NewRouter() Router {
+	return Router{}
+}
 
 func (r Router) Route(request dto.Request) {
 
