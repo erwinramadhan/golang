@@ -6,3 +6,7 @@ type Router struct {
 	rq RequestHandlerInterface
 }
 
+
+func (r Router) Route(request dto.Request) {
+
+}
