@@ -1,7 +1,7 @@
 package user
 
 import (
-	"onion-arch/dto"
+	"github.com/dibimbing-satkom-indo/onion-architecture-go/dto"
 )
 
 type Controller struct {
