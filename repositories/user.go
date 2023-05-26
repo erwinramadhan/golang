@@ -1,9 +1,12 @@
 package repositories
 
-import "github.com/dibimbing-satkom-indo/onion-architecture-go/entities"
+import (
+	"github.com/dibimbing-satkom-indo/onion-architecture-go/entities"
+	"gorm.io/gorm"
+)
 
 type UserRepository struct {
-	db any
+	db *gorm.DB
 }
 
 type UserRepositoryInterface interface {
