@@ -1,4 +1,4 @@
-module onion-arch
+module github.com/dibimbing-satkom-indo/onion-architecture-go
 
 go 1.19
 
