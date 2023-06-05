@@ -1,23 +1,16 @@
 package main
 
 import (
-	"github.com/dibimbing-satkom-indo/onion-architecture-go/dto"
-	"github.com/dibimbing-satkom-indo/onion-architecture-go/modules/user"
+	"bootcamp/routes"
+	"fmt"
 )
 
 func main() {
-	var request = dto.Request{
-		Body: map[string]string{
-			"id": "1",
-		},
-		Method: "GET",
-		Path:   "/get-user",
-		Header: map[string]string{
-			"Authorization": "token",
-		},
+	router := routes.Router()
+
+	errRouter := router.Run(":8081")
+	if errRouter != nil {
+		fmt.Println("error running server", errRouter)
+		return
 	}
-
-	router := user.NewRouter()
-	router.Route(request)
-
 }
